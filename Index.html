@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Malla Curricular TMED Morfofisiopatología y Citodiagnóstico</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff0f6;
+    color: #4a3c6b;
+    margin: 20px;
+  }
+  h1 {
+    text-align: center;
+    color: #9b59b6;
+    margin-bottom: 30px;
+  }
+  .malla {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+  }
+  .semestre {
+    background: #f8e6fb;
+    border-radius: 12px;
+    min-width: 220px;
+    padding: 15px 20px;
+    box-shadow: 0 0 10px #d6a6e1aa;
+    display: flex;
+    flex-direction: column;
+  }
+  .semestre h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #7f5fa4;
+    font-weight: 700;
+  }
+  .ramo {
+    background: #f4d4f4;
+    margin: 8px 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    color: #57365a;
+  }
+  .ramo.bloqueado {
+    background: #e7d4e8;
+    color: #a38baa;
+    cursor: not-allowed;
+  }
+  .ramo.desbloqueado {
+    background: #f4d4f4;
+    color: #57365a;
+    cursor: pointer;
+  }
+  .ramo.aprobado {
+    background: #cfa0d4;
+    color: #3a1e50;
+    border-color: #6e3b89;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<h1>Malla Curricular TMED Morfofisiopatología y Citodiagnóstico</h1>
+
+<div class="malla" id="malla">
+
+  <!-- Semestre 1 -->
+  <div class="semestre" data-semestre="1">
+    <h2>Semestre 1</h2>
+    <div class="ramo desbloqueado" data-nombre="Integrado de Habilidades Científicas para la Tecnología Médica" data-prerequisitos="">Integrado de Habilidades Científicas para la Tecnología Médica</div>
+    <div class="ramo desbloqueado" data-nombre="Antropología Ética Persona y Sociedad" data-prerequisitos="">Antropología Ética Persona y Sociedad</div>
+    <div class="ramo desbloqueado" data-nombre="Introducción a la Tecnología Médica" data-prerequisitos="">Introducción a la Tecnología Médica</div>
+    <div class="ramo desbloqueado" data-nombre="Biología Celular" data-prerequisitos="">Biología Celular</div>
+    <div class="ramo desbloqueado" data-nombre="Matemática Básica" data-prerequisitos="">Matemática Básica</div>
+    <div class="ramo desbloqueado" data-nombre="Química General y Orgánica" data-prerequisitos="">Química General y Orgánica</div>
+  </div>
+
+  <!-- Semestre 2 -->
+  <div class="semestre" data-semestre="2">
+    <h2>Semestre 2</h2>
+    <div class="ramo bloqueado" data-nombre="Ética" data-prerequisitos="Antropología Ética Persona y Sociedad">Ética</div>
+    <div class="ramo desbloqueado" data-nombre="Bioseguridad y Procedimientos de Apoyo Diagnóstico" data-prerequisitos="">Bioseguridad y Procedimientos de Apoyo Diagnóstico</div>
+    <div class="ramo desbloqueado" data-nombre="Tecnología Médica en el Equipo de Salud" data-prerequisitos="Introducción a la Tecnología Médica">Tecnología Médica en el Equipo de Salud</div>
+    <div class="ramo desbloqueado" data-nombre="Morfología Básica" data-prerequisitos="">Morfología Básica</div>
+    <div class="ramo bloqueado" data-nombre="Bioquímica General" data-prerequisitos="Química General y Orgánica">Bioquímica General</div>
+    <div class="ramo desbloqueado" data-nombre="Psicología de Atención al Paciente" data-prerequisitos="">Psicología de Atención al Paciente</div>
+  </div>
+
+  <!-- Semestre 3 -->
+  <div class="semestre" data-semestre="3">
+    <h2>Semestre 3</h2>
+    <div class="ramo bloqueado" data-nombre="Bioanálisis Instrumental" data-prerequisitos="Bioquímica General">Bioanálisis Instrumental</div>
+    <div class="ramo bloqueado" data-nombre="Bases Físicas de la Microscopía" data-prerequisitos="Matemática Básica">Bases Físicas de la Microscopía</div>
+    <div class="ramo desbloqueado" data-nombre="Infectología Básica" data-prerequisitos="Morfología Básica">Infectología Básica</div>
+    <div class="ramo bloqueado" data-nombre="Integrado Fisiología - Fisiopatología - Farmacología I" data-prerequisitos="Bioquímica General">Integrado Fisiología - Fisiopatología - Farmacología I</div>
+    <div class="ramo desbloqueado" data-nombre="Salud Poblacional" data-prerequisitos="">Salud Poblacional</div>
+  </div>
+
+  <!-- Semestre 4 -->
+  <div class="semestre" data-semestre="4">
+    <h2>Semestre 4</h2>
+    <div class="ramo desbloqueado" data-nombre="Bioética" data-prerequisitos="">Bioética</div>
+    <div class="ramo bloqueado" data-nombre="Histoembriología Clínica" data-prerequisitos="Morfología Básica">Histoembriología Clínica</div>
+    <div class="ramo bloqueado" data-nombre="Integrado Fisiología - Fisiopatología - Farmacología II" data-prerequisitos="Integrado Fisiología - Fisiopatología - Farmacología I">Integrado Fisiología - Fisiopatología - Farmacología II</div>
+    <div class="ramo bloqueado" data-nombre="Bases para el Procesamiento Citohistológico" data-prerequisitos="Bases Físicas de la Microscopía">Bases para el Procesamiento Citohistológico</div>
+    <div class="ramo desbloqueado" data-nombre="Epidemiología" data-prerequisitos="Salud Poblacional">Epidemiología</div>
+  </div>
+
+  <!-- Semestre 5 -->
+  <div class="semestre" data-semestre="5">
+    <h2>Semestre 5</h2>
+    <div class="ramo bloqueado" data-nombre="Bases del Diagnóstico Citogenético" data-prerequisitos="Bases para el Procesamiento Citohistológico">Bases del Diagnóstico Citogenético</div>
+    <div class="ramo desbloqueado" data-nombre="Persona y Sociedad" data-prerequisitos="Ética">Persona y Sociedad</div>
+    <div class="ramo bloqueado" data-nombre="Histopatología General" data-prerequisitos="Histoembriología Clínica">Histopatología General</div>
+    <div class="ramo bloqueado" data-nombre="Procedimientos para el Análisis Citohistológico" data-prerequisitos="Bases para el Procesamiento Citohistológico">Procedimientos para el Análisis Citohistológico</div>
+    <div class="ramo bloqueado" data-nombre="Bioestadística" data-prerequisitos="Matemática Básica">Bioestadística</div>
+  </div>
+
+  <!-- Semestre 6 -->
+  <div class="semestre" data-semestre="6">
+    <h2>Semestre 6</h2>
+    <div class="ramo bloqueado" data-nombre="Integrado Citohistológico General" data-prerequisitos="Procedimientos para el Análisis Citohistológico,Bases del Diagnóstico Citogenético">Integrado Citohistológico General</div>
+    <div class="ramo desbloqueado" data-nombre="Gestión en Equipos para el Alto Desempeño" data-prerequisitos="">Gestión en Equipos para el Alto Desempeño</div>
+    <div class="ramo bloqueado" data-nombre="Diagnóstico Citogenético Clínico" data-prerequisitos="Bases del Diagnóstico Citogenético">Diagnóstico Citogenético Clínico</div>
+    <div class="ramo bloqueado" data-nombre="Histopatología Avanzada" data-prerequisitos="Histopatología General">Histopatología Avanzada</div>
+    <div class="ramo bloqueado" data-nombre="Análisis Histoquímico" data-prerequisitos="Procedimientos para el Análisis Citohistológico">Análisis Histoquímico</div>
+    <div class="ramo desbloqueado" data-nombre="Electivo I: Formación e Identidad" data-prerequisitos="">Electivo I: Formación e Identidad</div>
+  </div>
+
+  <!-- Semestre 7 -->
+  <div class="semestre" data-semestre="7">
+    <h2>Semestre 7</h2>
+    <div class="ramo bloqueado" data-nombre="Diagnóstico Molecular" data-prerequisitos="Diagnóstico Citogenético Clínico">Diagnóstico Molecular</div>
+    <div class="ramo bloqueado" data-nombre="Informática Médica para Histopatología" data-prerequisitos="Integrado Citohistológico General">Informática Médica para Histopatología</div>
+    <div class="ramo bloqueado" data-nombre="Inmunohistoquímica Aplicada" data-prerequisitos="Análisis Histoquímico">Inmunohistoquímica Aplicada</div>
+    <div class="ramo bloqueado" data-nombre="Citodiagnóstico Ginecológico General" data-prerequisitos="Histopatología Avanzada">Citodiagnóstico Ginecológico General</div>
+    <div class="ramo desbloqueado" data-nombre="Metodología de la Investigación" data-prerequisitos="">Metodología de la Investigación</div>
+    <div class="ramo desbloqueado" data-nombre="Electivo II: Formación e Identidad" data-prerequisitos="">Electivo II: Formación e Identidad</div>
+  </div>
+
+  <!-- Semestre 8 -->
+  <div class="semestre" data-semestre="8">
+    <h2>Semestre 8</h2>
+    <div class="ramo bloqueado" data-nombre="Aplicaciones del Diagnóstico Molecular" data-prerequisitos="Diagnóstico Molecular">Aplicaciones del Diagnóstico Molecular</div>
+    <div class="ramo bloqueado" data-nombre="Integrado Citohistológico Clínico" data-prerequisitos="Inmunohistoquímica Aplicada,Citodiagnóstico Ginecológico General">Integrado Citohistológico Clínico</div>
+    <div class="ramo bloqueado" data-nombre="Citopatología Ginecológica y Miscelánea" data-prerequisitos="Citodiagnóstico Ginecológico General">Citopatología Ginecológica y Miscelánea</div>
+    <div class="ramo desbloqueado" data-nombre="Salud Digital" data-prerequisitos="">Salud Digital</div>
+    <div class="ramo desbloqueado" data-nombre="Electivo III: Formación e Identidad" data-prerequisitos="">Electivo III: Formación e Identidad</div>
+  </div>
+
+  <!-- Semestre 9 -->
+  <div class="semestre" data-semestre="9">
+    <h2>Semestre 9</h2>
+    <div class="ramo desbloqueado" data-nombre="Electivo 2" data-prerequisitos="">Electivo 2</div>
+    <div class="ramo desbloqueado" data-nombre="Electivo 1" data-prerequisitos="">Electivo 1</div>
+    <div class="ramo desbloqueado" data-nombre="Gestión de Carrera y Desarrollo Profesional" data-prerequisitos="">Gestión de Carrera y Desarrollo Profesional</div>
+    <div class="ramo desbloqueado" data-nombre="Taller de Investigación Aplicado en Tecnología Médica" data-prerequisitos="Semestre 7,Semestre 8">Taller de Investigación Aplicado en Tecnología Médica</div>
+    <div class="ramo desbloqueado" data-nombre="Sistema de Acreditación en Anatomía Patológica" data-prerequisitos="Integrado Citohistológico Clínico">Sistema de Acreditación en Anatomía Patológica</div>
+  </div>
+
+  <!-- Semestre 10 -->
+  <div class="semestre" data-semestre="10">
+    <h2>Semestre 10</h2>
+    <div class="ramo bloqueado" data-nombre="Internado" data-prerequisitos="Semestres anteriores">Internado</div>
+  </div>
+
+</div>
+
+<script>
+  // Para controlar ramos aprobados y desbloqueo de prerequisitos
+  function actualizarEstados() {
+    const ramos = document.querySelectorAll('.ramo');
+    const aprobados = new Set();
+    ramos.forEach(ramo => {
+      if (ramo.classList.contains('aprobado')) {
+        aprobados.add(ramo.dataset.nombre);
+      }
+    });
+
+    ramos.forEach(ramo => {
+      if (ramo.classList.contains('aprobado')) return; // no cambiar aprobados
+
+      const prereqsRaw = ramo.dataset.prerequisitos;
+      if (!prereqsRaw || prereqsRaw.trim() === '') {
+        // Sin prerequisitos: desbloqueado
+        ramo.classList.add('desbloqueado');
+        ramo.classList.remove('bloqueado');
+      } else {
+        // Verificar todos los prerequisitos
+        const prereqs = prereqsRaw.split(',').map(p => p.trim());
+        // Para prereqs especiales tipo "Semestre 7,Semestre 8" o "Semestres anteriores" manejamos aparte:
+        if (prereqs.includes('Semestres anteriores')) {
+          // desbloquear solo si todos semestres previos aprobados
+          // Chequear que en semestres <10 todos ramos aprobados
+          const semestresPrevios = Array.from(document.querySelectorAll('.semestre[data-semestre]'))
+            .filter(s => parseInt(s.dataset.semestre) < 10);
+          let todosPreviosAprobados = true;
+          for (const semestre of semestresPrevios) {
+            const ramosSemestre = semestre.querySelectorAll('.ramo');
+            for (const r of ramosSemestre) {
+              if (!r.classList.contains('aprobado')) {
+                todosPreviosAprobados = false;
+                break;
+              }
+            }
+            if (!todosPreviosAprobados) break;
+          }
+          if (todosPreviosAprobados) {
+            ramo.classList.add('desbloqueado');
+            ramo.classList.remove('bloqueado');
+          } else {
+            ramo.classList.add('bloqueado');
+            ramo.classList.remove('desbloqueado');
+          }
+          return;
+        }
+        if (prereqs.includes('Semestre 7') || prereqs.includes('Semestre 8')) {
+          // Para "Taller de Investigación..." que dice prereqs Semestre 7, Semestre 8
+          // Validar que todos los ramos de esos semestres estén aprobados
+          let aprobado7 = true;
+          let aprobado8 = true;
+          // sem7
+          const sem7 = document.querySelector('.semestre[data-semestre="7"]');
+          sem7.querySelectorAll('.ramo').forEach(r => {
+            if (!r.classList.contains('aprobado')) aprobado7 = false;
+          });
+          // sem8
+          const sem8 = document.querySelector('.semestre[data-semestre="8"]');
+          sem8.querySelectorAll('.ramo').forEach(r => {
+            if (!r.classList.contains('aprobado')) aprobado8 = false;
+          });
+          if (aprobado7 && aprobado8) {
+            ramo.classList.add('desbloqueado');
+            ramo.classList.remove('bloqueado');
+          } else {
+            ramo.classList.add('bloqueado');
+            ramo.classList.remove('desbloqueado');
+          }
+          return;
+        }
+
+        // Prerequisitos normales: todos deben estar aprobados
+        const todosAprobados = prereqs.every(p => aprobados.has(p));
+        if (todosAprobados) {
+          ramo.classList.add('desbloqueado');
+          ramo.classList.remove('bloqueado');
+        } else {
+          ramo.classList.add('bloqueado');
+          ramo.classList.remove('desbloqueado');
+        }
+      }
+    });
+  }
+
+  document.getElementById('malla').addEventListener('click', e => {
+    const el = e.target;
+    if (!el.classList.contains('ramo')) return;
+    if (el.classList.contains('bloqueado')) return;
+    if (el.classList.contains('aprobado')) {
+      el.classList.remove('aprobado');
+      actualizarEstados();
+      return;
+    }
+    el.classList.add('aprobado');
+    actualizarEstados();
+  });
+
+  actualizarEstados();
+</script>
+
+</body>
+</html>
